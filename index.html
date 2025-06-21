@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile E-commerce Website</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <button class="hamburger-btn">
+                    <img src="./assets/shared/tablet/icon-hamburger.svg" alt="Open Menu">
+                </button>
+                <a href="/" class="logo">
+                    <img src="./assets/shared/desktop/logo.svg" alt="Audiophile">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./category.html?category=headphones">Headphones</a></li>
+                    <li><a href="./category.html?category=speakers">Speakers</a></li>
+                    <li><a href="./category.html?category=earphones">Earphones</a></li>
+                </ul>
+                <button class="cart-btn">
+                    <img src="./assets/shared/desktop/icon-cart.svg" alt="Shopping Cart">
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="overline">NEW PRODUCT</p>
+                    <h1>XX99 Mark II Headphones</h1>
+                    <p class="hero-body">
+                        Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
+                    </p>
+                    <a href="#" class="btn btn-primary">See Product</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <div class="category-grid">
+                    <article class="category-card">
+                        <img src="./assets/shared/desktop/image-category-thumbnail-headphones.png" alt="Headphones" class="category-card-img">
+                        <div class="category-card-body">
+                            <h3>Headphones</h3>
+                            <a href="#" class="shop-link">
+                                Shop
+                                <img src="./assets/shared/desktop/icon-arrow-right.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="category-card">
+                        <img src="./assets/shared/desktop/image-category-thumbnail-speakers.png" alt="Speakers" class="category-card-img">
+                        <div class="category-card-body">
+                            <h3>Speakers</h3>
+                            <a href="#" class="shop-link">
+                                Shop
+                                <img src="./assets/shared/desktop/icon-arrow-right.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="category-card">
+                        <img src="./assets/shared/desktop/image-category-thumbnail-earphones.png" alt="Earphones" class="category-card-img">
+                        <div class="category-card-body">
+                            <h3>Earphones</h3>
+                            <a href="#" class="shop-link">
+                                Shop
+                                <img src="./assets/shared/desktop/icon-arrow-right.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <div class="container">
+                <div class="featured-zx9">
+                    <div class="featured-zx9-img-container">
+                        <img src="./assets/home/desktop/image-speaker-zx9.png" alt="ZX9 Speaker" class="featured-zx9-img">
+                    </div>
+                    <div class="featured-zx9-content">
+                        <h2>ZX9 Speaker</h2>
+                        <p>
+                            Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity—creating new possibilities for more pleasing and practical audio setups.
+                        </p>
+                        <a href="#" class="btn btn-secondary">See Product</a>
+                    </div>
+                    <div class="featured-zx7">
+                        <div class="featured-zx7-content">
+                            <h2>ZX7 Speaker</h2>
+                            <a href="#" class="btn btn-outline">See Product</a>
+                        </div>
+                    </div>
+
+                    <div class="featured-yx1">
+                        <div class="featured-yx1-img">
+                            <img src="./assets/home/desktop/image-earphones-yx1.jpg" alt="YX1 Earphones">
+                        </div>
+                        <div class="featured-yx1-content">
+                            <h2>YX1 Earphones</h2>
+                            <a href="#" class="btn btn-outline">See Product</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+
+    <div class="cart-modal-overlay" id="cart-modal-overlay">
+        <div class="cart-modal-content" id="cart-modal-content">
+            <div class="cart-header">
+                <h3>Cart (<span id="cart-item-count">0</span>)</h3>
+                <button class="remove-all-btn" id="remove-all-btn">Remove all</button>
+            </div>
+            <div class="cart-items-container" id="cart-items-container">
+                <p class="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <p>Total</p>
+                    <h3 id="cart-total-price">$ 0</h3>
+                </div>
+                <a href="/checkout.html" class="btn btn-primary full-width">Checkout</a>
+            </div>
+        </div>
+    </div>    
+    <script src="js/cart.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

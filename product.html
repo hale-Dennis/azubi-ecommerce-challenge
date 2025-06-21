@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile | Product</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-product">
+
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <button class="hamburger-btn">
+                    <img src="./assets/shared/tablet/icon-hamburger.svg" alt="Open Menu">
+                </button>
+                <a href="/" class="logo">
+                    <img src="./assets/shared/desktop/logo.svg" alt="Audiophile">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./category.html?category=headphones">Headphones</a></li>
+                    <li><a href="./category.html?category=speakers">Speakers</a></li>
+                    <li><a href="./category.html?category=earphones">Earphones</a></li>
+                </ul>
+                <button class="cart-btn">
+                    <img src="./assets/shared/desktop/icon-cart.svg" alt="Shopping Cart">
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="#" onclick="history.back(); return false;" class="back-link">Go Back</a>
+
+        <section class="product-showcase" id="product-detail-container">
+            </section>
+
+        <section class="product-features">
+            <div class="features-content">
+                <h3>Features</h3>
+                <div id="features-text"></div>
+            </div>
+            <div class="in-the-box">
+                <h3>In the box</h3>
+                <ul id="includes-list"></ul>
+            </div>
+        </section>
+
+        <section class="product-gallery" id="product-gallery-container">
+            </section>
+
+        <section class="you-may-also-like">
+            <h3>You may also like</h3>
+            <div class="related-products-grid" id="related-products-container">
+                </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+    <div class="cart-modal-overlay" id="cart-modal-overlay">
+        <div class="cart-modal-content" id="cart-modal-content">
+            <div class="cart-header">
+                <h3>Cart (<span id="cart-item-count">0</span>)</h3>
+                <button class="remove-all-btn" id="remove-all-btn">Remove all</button>
+            </div>
+            <div class="cart-items-container" id="cart-items-container">
+                <p class="empty-cart-message">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <p>Total</p>
+                    <h3 id="cart-total-price">$ 0</h3>
+                </div>
+                <a href="/checkout.html" class="btn btn-primary full-width">Checkout</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiophile | Checkout</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-checkout">
+
+    <header>
+        <div class="container">
+            <nav class="header-nav">
+                <button class="hamburger-btn">
+                    <img src="./assets/shared/tablet/icon-hamburger.svg" alt="Open Menu">
+                </button>
+                <a href="/" class="logo">
+                    <img src="./assets/shared/desktop/logo.svg" alt="Audiophile">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/category.html?category=headphones">Headphones</a></li>
+                    <li><a href="/category.html?category=speakers">Speakers</a></li>
+                    <li><a href="/category.html?category=earphones">Earphones</a></li>
+                </ul>
+                <button class="cart-btn">
+                    <img src="./assets/shared/desktop/icon-cart.svg" alt="Shopping Cart">
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="#" onclick="history.back(); return false;" class="back-link">Go Back</a>
+
+        <form id="checkout-form" novalidate>
+            <div class="checkout-layout">
+                <div class="checkout-form-container">
+                    <h1>Checkout</h1>
+                    
+                    <fieldset>
+                        <legend class="fieldset-legend">Billing Details</legend>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Alexei Ward" required>
+                                <small class="form-error"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="alexei@mail.com" required>
+                                <small class="form-error"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 202-555-0136" required>
+                                <small class="form-error"></small>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend class="fieldset-legend">Shipping Info</legend>
+                        <div class="form-group form-group-full">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="1137 Williams Avenue" required>
+                            <small class="form-error"></small>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001" required>
+                                <small class="form-error"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" placeholder="New York" required>
+                                <small class="form-error"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" name="country" placeholder="United States" required>
+                                <small class="form-error"></small>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend class="fieldset-legend">Payment Details</legend>
+                        <div class="form-grid">
+                            <label class="form-group-label" for="payment">Payment Method</label>
+                            <div class="radio-group-container">
+                                <div class="radio-group">
+                                    <input type="radio" id="e-money" name="paymentMethod" value="e-money" checked>
+                                    <label for="e-money">e-Money</label>
+                                </div>
+                                <div class="radio-group">
+                                    <input type="radio" id="cash" name="paymentMethod" value="cash">
+                                    <label for="cash">Cash on Delivery</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-conditional-fields" id="payment-conditional-fields">
+                            <div class="form-grid" id="e-money-fields">
+                                <div class="form-group">
+                                    <label for="e-money-number">e-Money Number</label>
+                                    <input type="text" id="e-money-number" name="e-money-number" placeholder="238521993">
+                                    <small class="form-error"></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="e-money-pin">e-Money PIN</label>
+                                    <input type="text" id="e-money-pin" name="e-money-pin" placeholder="6891">
+                                    <small class="form-error"></small>
+                                </div>
+                            </div>
+                            <div class="cash-on-delivery-info" id="cash-on-delivery-info" style="display: none;">
+                                <img src="./assets/checkout/icon-cash-on-delivery.svg" alt="Cash on Delivery">
+                                <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="checkout-summary-container">
+                    <h3>Summary</h3>
+                    <div id="summary-items-container">
+                        </div>
+                    <div class="summary-totals">
+                        <div class="summary-line"><p>Total</p><span id="summary-subtotal">$ 0</span></div>
+                        <div class="summary-line"><p>Shipping</p><span id="summary-shipping">$ 0</span></div>
+                        <div class="summary-line"><p>VAT (20%)</p><span id="summary-vat">$ 0</span></div>
+                        <div class="summary-line grand-total"><p>Grand Total</p><span id="summary-grand-total">$ 0</span></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary full-width">Continue & Pay</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <div class="modal-overlay" id="confirmation-modal-overlay">
+        <div class="confirmation-modal-content">
+            <img src="./assets/checkout/icon-order-confirmation.svg" alt="Order confirmed">
+            <h2>Thank you<br>for your order</h2>
+            <p class="confirmation-subtext">You will receive an email confirmation shortly.</p>
+            <div class="confirmation-summary">
+                <div class="confirmation-items-box" id="confirmation-items-box">
+                    </div>
+                <div class="confirmation-grand-total">
+                    <p>Grand Total</p>
+                    <span id="confirmation-grand-total">$ 0</span>
+                </div>
+            </div>
+            <a href="/" class="btn btn-primary full-width">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
