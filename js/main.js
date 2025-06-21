@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (hamburgerBtn && mobileMenu) {
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('is-open');
+        });
+    }
+
     const cartModalOverlay = document.getElementById('cart-modal-overlay');
     const cartItemsContainer = document.getElementById('cart-items-container');
     const cartItemCount = document.getElementById('cart-item-count');

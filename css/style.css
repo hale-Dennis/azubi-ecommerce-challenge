@@ -557,7 +557,7 @@ Mobile Styles (max-width: 767px)
     }
     
     .featured-zx7 {
-        background-image: url('../assets/home/mobile/image-speaker-zx7.jpg'); /*  */
+        background-image: url('../assets/home/mobile/image-speaker-zx7.jpg');
         padding: 6rem 1.5rem;
     }
 
@@ -1174,4 +1174,55 @@ fieldset {
     padding: 0;
     margin: 0; 
     margin-bottom: 2.5rem;
+}
+
+.mobile-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 90px; /* Position below the header */
+    left: 0;
+    right: 0;
+    background-color: var(--clr-neutral-100);
+    padding: 3rem 2rem 2rem;
+    z-index: 500;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* This class will be toggled by JavaScript to show the menu */
+.mobile-menu.is-open {
+    display: block;
+}
+
+.mobile-menu .mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mobile-menu .mobile-nav-links li {
+    margin-bottom: 2rem;
+}
+
+.mobile-menu .mobile-nav-links a {
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    font-size: 1.125rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.mobile-menu .mobile-nav-links a:hover {
+    color: var(--clr-primary-400);
+}
+
+/* We never want this menu to appear on desktop */
+@media (min-width: 1110px) {
+    .mobile-menu {
+        display: none !important;
+    }
 }
