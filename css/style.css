@@ -1177,9 +1177,9 @@ fieldset {
 }
 
 .mobile-menu {
-    display: none; /* Hidden by default */
+    display: none; 
     position: absolute;
-    top: 90px; /* Position below the header */
+    top: 90px;
     left: 0;
     right: 0;
     background-color: var(--clr-neutral-100);
