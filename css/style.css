@@ -1226,3 +1226,32 @@ fieldset {
         display: none !important;
     }
 }
+
+/*
+================================================================
+================================================================
+Checkout Page Responsive Styles
+================================================================
+================================================================
+*/
+
+@media (max-width: 1110px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767px) {
+    .checkout-form-container, .checkout-summary-container {
+        padding: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-form-container h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
