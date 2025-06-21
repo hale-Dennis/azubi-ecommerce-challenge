@@ -1152,3 +1152,26 @@ Modal Styles (For both Cart and Confirmation)
     border-radius: var(--border-radius);
     padding: 2rem;
 }
+
+/*
+=============== 
+Disabled Button State
+===============
+*/
+.btn.disabled {
+    background-color: #cccccc; 
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/*
+=============== 
+Form Fieldset Reset
+===============
+*/
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0; 
+    margin-bottom: 2.5rem;
+}

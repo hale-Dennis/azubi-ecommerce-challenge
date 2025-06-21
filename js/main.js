@@ -6,13 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTotalPrice = document.getElementById('cart-total-price');
     const removeAllBtn = document.getElementById('remove-all-btn');
     
+    const cartCheckoutBtn = document.getElementById('cart-checkout-btn');
+
     const renderCart = () => {
         const items = Cart.getCart();
-        cartItemsContainer.innerHTML = '';
+        cartItemsContainer.innerHTML = ''; 
 
         if (items.length === 0) {
             cartItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty.</p>';
+            if (cartCheckoutBtn) {
+                cartCheckoutBtn.classList.add('disabled');
+            }
         } else {
+            if (cartCheckoutBtn) {
+                cartCheckoutBtn.classList.remove('disabled');
+            }
             items.forEach(item => {
                 const cartItemEl = document.createElement('div');
                 cartItemEl.classList.add('cart-item');
