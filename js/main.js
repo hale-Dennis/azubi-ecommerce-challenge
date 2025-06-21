@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const items = Cart.getCart();
         cartItemsContainer.innerHTML = ''; 
 
+
+
         if (items.length === 0) {
             cartItemsContainer.innerHTML = '<p class="empty-cart-message">Your cart is empty.</p>';
             if (cartCheckoutBtn) {
@@ -39,12 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <strong>${item.name.replace(/(headphones|earphones|speaker)/i, '').trim()}</strong>
                         <p>$ ${item.price.toLocaleString()}</p>
                     </div>
+
                     <div class="quantity-selector">
                         <button class="cart-quantity-btn" data-id="${item.id}" data-change="-1">-</button>
                         <span class="quantity-display">${item.quantity}</span>
                         <button class="cart-quantity-btn" data-id="${item.id}" data-change="1">+</button>
                     </div>
-                `;
+                    `;
                 cartItemsContainer.appendChild(cartItemEl);
             });
         }
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if(cartItemsContainer) {
         cartItemsContainer.addEventListener('click', (e) => {
             if (e.target.matches('.cart-quantity-btn')) {
-                const productId = e.target.dataset.id;
+                const productId = parseInt(e.target.dataset.id); 
                 const change = parseInt(e.target.dataset.change);
                 
                 const item = Cart.getCart().find(i => i.id == productId);
